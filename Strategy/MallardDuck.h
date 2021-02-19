@@ -1,0 +1,4 @@
+class MallardDuck : public Duck
+{
+
+};
