@@ -12,7 +12,7 @@ public:
     {
     }
 
-    void display() const override
+    virtual void display() const override
     {
         std::cout << "I'm displaying a Mallard Duck" << std::endl;
     }

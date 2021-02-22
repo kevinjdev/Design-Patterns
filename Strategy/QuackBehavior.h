@@ -13,7 +13,7 @@ public:
 class NormalQuack : public QuackBehavior
 {
 public:
-    void quack() const override
+    virtual void quack() const override
     {
         std::cout << "I am quacking normally" << std::endl;
     }
@@ -22,7 +22,7 @@ public:
 class FakeQuack : public QuackBehavior
 {
 public:
-    void quack() const override
+    virtual void quack() const override
     {
         std::cout << "I am fake quacking" << std::endl;
     }

@@ -13,7 +13,7 @@ public:
 class FlyWithWings : public FlyBehavior
 {
 public:
-    void fly() const override
+    virtual void fly() const override
     {
         std::cout << "I'm Flying with Wings" << std::endl;
     }
@@ -22,7 +22,7 @@ public:
 class CantFly : public FlyBehavior
 {
 public:
-    void fly() const override
+    virtual void fly() const override
     {
         std::cout << "I can't fly. I'm sad :( " << std::endl;
     }
