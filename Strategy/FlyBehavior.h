@@ -5,14 +5,15 @@
 
 class FlyBehavior
 {
-    public:
+public:
     virtual void fly() const = 0;
+    virtual ~FlyBehavior() {}
 };
 
 class FlyWithWings : public FlyBehavior
 {
-    public:
-    void fly()
+public:
+    void fly() const override
     {
         std::cout << "I'm Flying with Wings" << std::endl;
     }
@@ -20,12 +21,11 @@ class FlyWithWings : public FlyBehavior
 
 class CantFly : public FlyBehavior
 {
-    public:
-    void fly()
+public:
+    void fly() const override
     {
-        std::cout << "I can't fly. I'm sad :( " << std::enl;
+        std::cout << "I can't fly. I'm sad :( " << std::endl;
     }
 };
-
 
 #endif
